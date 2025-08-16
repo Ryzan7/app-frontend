@@ -8,7 +8,7 @@ function App() {
 
   const enviarViagem = async () => {
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/viagem`, {
+      const res = await axios.post(`https://${import.meta.env.VITE_API_URL}/viagem`, {
         nome,
         planeta,
       });
