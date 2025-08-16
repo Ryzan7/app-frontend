@@ -14,7 +14,8 @@ function App() {
       });
       setResposta(res.data);
     } catch (err) {
-      console.error(err);
+      console.error("Erro na requisição:", err);
+      setResposta({ mensagem: "Erro ao enviar: " + (err.response?.data?.erro || err.message) });
     }
   };
 
